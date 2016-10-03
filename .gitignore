@@ -13,6 +13,9 @@ g#----------------------------------------------------------------------------
 # background image which changes based on which project is loaded
 public/background.jpg
 
+.DS_Store
+._.DS_Store
+
 # bundler state
 /.bundle
 /vendor/bundle/

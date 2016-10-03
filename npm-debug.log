@@ -1,0 +1,21 @@
+41991 silly gunzTarPerm extractEntry bin/sshpk-sign
+41992 silly gunzTarPerm extractEntry bin/sshpk-verify
+41993 error Error: ENOENT, lstat '/var/www/html/Scribe/scribeAPI/node_modules/jest-cli/node_modules/jsdom/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/yallist.js'
+41994 error If you need help, you may report this log at:
+41994 error     <http://github.com/isaacs/npm/issues>
+41994 error or email it to:
+41994 error     <npm-@googlegroups.com>
+41995 error System Linux 3.13.0-68-generic
+41996 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+41997 error cwd /var/www/html/Scribe/scribeAPI
+41998 error node -v v0.10.25
+41999 error npm -v 1.3.10
+42000 error path /var/www/html/Scribe/scribeAPI/node_modules/jest-cli/node_modules/jsdom/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/yallist.js
+42001 error fstream_path /var/www/html/Scribe/scribeAPI/node_modules/jest-cli/node_modules/jsdom/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/yallist.js
+42002 error fstream_type File
+42003 error fstream_class FileWriter
+42004 error code ENOENT
+42005 error errno 34
+42006 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:284:26
+42006 error fstream_stack Object.oncomplete (fs.js:107:15)
+42007 verbose exit [ 34, true ]
