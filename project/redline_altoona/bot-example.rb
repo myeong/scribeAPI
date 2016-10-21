@@ -130,14 +130,13 @@ bot = ScribeBot.new options["scribe-endpoint"]
 
 require 'csv'
 
-paths = ['subjects/group_New.csv','subjects/group_Dayton.csv','subjects/group_Stamford.csv','subjects/group_Pittsburgh.csv',
-  'subjects/group_Augusta.csv','subjects/group_Bridgeport.csv','subjects/group_Jamestown.csv','subjects/group_Lower.csv']
+paths = ['subjects/group_Altoona.csv']
 
 paths.each do |path|
   CSV.foreach(path) do |row|
-    next if row[1]== "file_path"
-    puts row[1]
-    image_uri = row[1]
+    next if row[2]== "file_path"
+    puts row[2]
+    image_uri = row[2]
 
     CSV.foreach('marks.csv') do |r|
       classification = bot.classify_subject_by_url( image_uri, "mark", "mark_primary", {
@@ -147,12 +146,13 @@ paths.each do |path|
         color: "red", 
         isTranscribable: "true", 
         status: "mark", 
-        isUncommitted: "true",
+        isUncommitted: "true",        
         x: r[0], 
         y: r[1], 
         width: r[2], 
         height: r[3],
-        subToolIndex: r[4]     # Must specify subToolIndex (integer index into the tools array configured for workflow task)
+        subToolIndex: r[4],     # Must specify subToolIndex (integer index into the tools array configured for workflow task)
+        _key: r[5]
       })['classification']
       # puts classification
       # classification = classification['classification']
@@ -160,6 +160,10 @@ paths.each do |path|
       # Response should contain a classification with a nested child_subject:
       puts "Created classification: #{classification.to_json}"
     end      
+
+    classification = bot.classify_subject_by_url( image_uri, "mark", "completion_assessment_task", {
+      value: "complete_subject"
+    })['classification']
   end
   
 end
