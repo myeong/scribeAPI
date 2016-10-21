@@ -17,7 +17,8 @@
       "tool_config": {
         "displays_transcribe_button": true
       },      
-      "generates_subject_type": "consensus_city_name"
+      "generates_subject_type": "consensus_city_name",
+      "export_name": "City Name"
     },
 
     "rd_trans_security_grade": {
@@ -26,7 +27,8 @@
       "tool_config": {
         "displays_transcribe_button": true
       },      
-      "generates_subject_type": "consensus_security_grade"
+      "generates_subject_type": "consensus_security_grade",
+      "export_name": "Security Grade"
     },
  
     "rd_trans_area_number": {
@@ -36,7 +38,8 @@
         "displays_transcribe_button": true
       },
     
-      "generates_subject_type": "consensus_area_number"
+      "generates_subject_type": "consensus_area_number",
+      "export_name": "Area Number"
     },
 
     "rd_trans_desc_terrain": {
@@ -45,7 +48,8 @@
       "tool_config": {
         "displays_transcribe_button": true
       },
-      "generates_subject_type": "consensus_desc_terrain"
+      "generates_subject_type": "consensus_desc_terrain",
+      "export_name": "Description Terrain"
       
     },
     "rd_trans_favor_influences": {
@@ -54,7 +58,8 @@
       "tool_config": {
         "displays_transcribe_button": true
       },
-      "generates_subject_type": "consensus_favor_influences"
+      "generates_subject_type": "consensus_favor_influences",
+      "export_name": "Favor of Influences"
       
     },
 
