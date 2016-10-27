@@ -1,11 +1,11 @@
 {
   "name": "transcribe",
-  "label": "Transcribe Workflow",
-  "retire_limit": 2,
+  "label": "Transcribe Workflow",  
   "generates_subjects": true,
   "generates_subjects_for": "verify",
-  "subject_fetch_limit": "100",
-  "generates_subjects_max": 60,
+  "generates_subjects_after": 2,
+  "subject_fetch_limit": "500",
+  "generates_subjects_max": 10,
   "generates_subjects_method": "collect-unique",
 
   "tasks": {
@@ -16,7 +16,8 @@
       "instruction": "Enter the name of the city",
       "examples": ["Altoona, Pa."],      
       "generates_subject_type": "rd_trans_city_name",
-      "next_task": null
+      "next_task": null,
+      "export_name": "City Name"
     },
 
     "rd_security_grade": {
@@ -25,7 +26,8 @@
       "instruction": "Enter the Security Grade",
       "examples": ["A"],
       "generates_subject_type": "rd_trans_security_grade",
-      "next_task": null
+      "next_task": null,
+      "export_name": "Security Grade"
     },
 
     "rd_area_number": {
@@ -33,7 +35,8 @@
       "instruction": "Enter the area number",
       "examples": ["1"],
       "generates_subject_type": "rd_trans_area_number",
-      "next_task": null
+      "next_task": null,
+      "export_name": "Area Number"
     },
 
     "rd_desc_terrain": {
@@ -42,7 +45,8 @@
       "instruction": "Enter the Description of Terrain",
       "examples": ["Level"],
       "generates_subject_type": "rd_trans_desc_terrain",
-      "next_task": null
+      "next_task": null,
+      "export_name": "Description Terrain"
     },
 
     "rd_favor_influences": {
@@ -51,7 +55,8 @@
       "instruction": "Enter the Favorable Influences",
       "examples": ["The most desirable section of Altoona in point of location, class of people,..."],
       "generates_subject_type": "rd_trans_favor_influences",
-      "next_task": null
+      "next_task": null,
+      "export_name": "Favor of Influences"
     },
 
     "rd_det_influences": {

@@ -133,7 +133,7 @@ module.exports = React.createClass # rename to Classifier
         }
 
         { if @state.noMoreSubjects
-            <NoMoreSubjectsModal header={ if @state.userClassifiedAll then "Thanks for transcribing!" else "Nothing to transcribe" } workflowName={@props.workflowName} project={@props.project} />
+            <NoMoreSubjectsModal header={ if @state.userClassifiedAll then "Thanks for transcribing!" else "Nothing to transcribe..." } workflowName={@props.workflowName} project={@props.project} />
             
           else if @getCurrentSubject()? and @getCurrentTask()?
 

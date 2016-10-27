@@ -20,6 +20,19 @@
     "group": "ship",
     "subject set": "page",
     "subject": "page"
-  }
+  },
+
+  "export_specs": [
+    {
+      "name": "Redlining",
+      "spec_fields": [
+        {"name": "City Name", "repeats": false},
+        {"name": "Security Grade", "repeats": false},
+        {"name": "Area Number", "format": "numeric", "repeats": false},
+        {"name": "Description Terrain", "repeats": false},
+        {"name": "Favor of Influences", "repeats": false}        
+      ]
+    }
+  ]
 
 }
