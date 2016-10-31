@@ -80,7 +80,8 @@ CompositeTool = React.createClass
 
     if @props.transcribeMode is 'page' or @props.transcribeMode is 'single'
       if @props.isLastSubject and not @props.task.next_task?
-        @props.returnToMarking()
+        #@props.returnToMarking()
+        @transitionTo 'verify'
     else if @props.transcribeMode == 'verify'
       @transitionTo 'verify'
 
@@ -112,7 +113,8 @@ CompositeTool = React.createClass
        'Continue'
       else
         if @props.isLastSubject and ( @props.transcribeMode is 'page' or @props.transcribeMode is 'single' )
-          'Return to Marking'
+          #'Return to Marking'
+          'Return to Verify'
         else if @props.transcribeMode is 'verify'
           'Return to Verify'
         else 'Next Entry'
