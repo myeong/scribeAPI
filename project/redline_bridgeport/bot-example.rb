@@ -130,7 +130,7 @@ bot = ScribeBot.new options["scribe-endpoint"]
 
 require 'csv'
 
-paths = ['subjects/group_Greater.csv']
+paths = ['subjects/group_Bridgeport.csv']
 
 paths.each do |path|
   CSV.foreach(path) do |row|
